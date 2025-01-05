@@ -1,4 +1,6 @@
 import { Navbar } from "@/components/header";
+import { CTA } from "@/components/sections/cta-section";
+import { Footer } from "@/components/sections/footer";
 import { HeroSection } from "@/components/sections/hero-section";
 import { Pricing } from "@/components/sections/pricing-section";
 import { ProcessSection } from "@/components/sections/process-section";
@@ -14,6 +16,8 @@ export default function Home() {
       <ProcessSection />
       <WorkSection />
       <Pricing />
+      <CTA />
+      <Footer />
     </div>
   );
 }

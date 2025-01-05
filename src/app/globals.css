@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 
 @layer base {
   html {
@@ -29,5 +30,11 @@
       rgb(0, 0, 0) 72.5%,
       rgba(0, 0, 0, 0) 100%
     );
+  }
+
+  .font-serif {
+    font-family: "Instrument+Serif";
+    font-style: italic;
+    font-weight: 400;
   }
 }
