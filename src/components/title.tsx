@@ -14,7 +14,7 @@ export const Title = ({ children, className }: ServiceElementsProps) => {
   return (
     <div
       className={cn(
-        "text-3xl leading-snug tracking-tight font-bold text-brand",
+        "text-3xl leading-snug tracking-tight font-bold text-brand mb-4",
         className
       )}
     >
