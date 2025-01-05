@@ -2,12 +2,14 @@ import { Button, Highlight } from "../button";
 import { Container } from "../container-wrapper";
 import { HeroSubTitle, HeroTitle } from "../hero";
 import { icons } from "@/lib/constant";
+import { HeroTestimonials } from "../hero-testimonials";
+import { ProjectsScroll } from "../projects-scroll";
 
 export function HeroSection() {
   return (
-    <>
-      <Container className="flex w-full items-baseline gap-10 py-[20rem]">
-        <div>
+    <div className="w-full h-[calc(100vh-(var(--navbar-height))] pt-[15rem] pb-10">
+      <Container className="flex w-full justify-between items-center gap-10">
+        <div className="w-[70%] h-full">
           <div className="flex flex-col space-y-5 mb-10">
             <Highlight className="flex items-center gap-x-2">
               <div className="w-2 h-2 bg-green rounded-full"></div>
@@ -59,7 +61,10 @@ export function HeroSection() {
             </div>
           </div>
         </div>
+        <HeroTestimonials />
       </Container>
-    </>
+
+      <ProjectsScroll />
+    </div>
   );
 }

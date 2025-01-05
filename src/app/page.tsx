@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/header";
 import { CTA } from "@/components/sections/cta-section";
+import { FAQ } from "@/components/sections/faq";
 import { Footer } from "@/components/sections/footer";
 import { HeroSection } from "@/components/sections/hero-section";
 import { Pricing } from "@/components/sections/pricing-section";
@@ -16,6 +17,7 @@ export default function Home() {
       <ProcessSection />
       <WorkSection />
       <Pricing />
+      <FAQ />
       <CTA />
       <Footer />
     </div>

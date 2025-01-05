@@ -211,3 +211,61 @@ export const pricing = [
     cta: "Get a Quote",
   },
 ];
+
+export const faqs = [
+  {
+    question: "Why wouldn't I just hire a full-time designer?",
+    answer:
+      "Our subscription model offers flexibility and cost-effectiveness, allowing you to access a team of designers without the overhead of a full-time hire.",
+  },
+  {
+    question: "How fast will I receive my designs?",
+    answer:
+      "You can typically expect your designs within 48 hours, depending on the complexity of your request.",
+  },
+  {
+    question: "How do I request designs?",
+    answer:
+      "Requests can be submitted easily through our user-friendly platform, Trello. Just provide your specifications and any examples you have in mind.",
+  },
+  {
+    question: "What if I don't like the design?",
+    answer:
+      "We offer revisions to ensure the design meets your expectations. Your feedback is crucial for us to deliver the best results.",
+  },
+  {
+    question: "Is there any design work you don't cover?",
+    answer:
+      "While we cover a wide range of design services, there may be specific types we don't handle. Please check our service list for details.",
+  },
+  {
+    question: "Are there any refunds if I don't like the service?",
+    answer:
+      "Customer satisfaction is our priority. If you're not happy with our service, please reach out, and we will work to address your concerns. Refunds may be available based on specific circumstances.",
+  },
+];
+
+export const testimonials = [
+  {
+    quote:
+      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+    name: "Alex Young",
+    designation: "Product Manager at TechFlow",
+    src: "/profile1.avif",
+  },
+  {
+    quote:
+      "Ripple's exceptional team created a remarkable and awesome website with professionalism and creativity.",
+
+    name: "Ava Moreno",
+    designation: "Product Manager at TechFlow",
+    src: "/profile2.avif",
+  },
+  {
+    quote:
+      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+    name: "Ethan Sawyer",
+    designation: "Product Manager at TechFlow",
+    src: "/profile3.avif",
+  },
+];
