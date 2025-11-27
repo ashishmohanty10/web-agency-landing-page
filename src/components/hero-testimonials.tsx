@@ -108,7 +108,7 @@ function Testimonials({ testimonials }: { testimonials: TestimonialsTypes[] }) {
               >
                 <div>
                   <p className="text-base leading-relaxed text-gray-700 font-medium">
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </p>
                 </div>
 

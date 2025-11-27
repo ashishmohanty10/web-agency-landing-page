@@ -239,8 +239,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Ripple's exceptional team created a remarkable and awesome website with professionalism and creativity.",
-
+      "The team delivered an impressive website with remarkable professionalism and creativity. The final result exceeded our expectations.",
     name: "Ava Moreno",
     designation: "Product Manager at TechFlow",
     src: "/profile2.avif",
