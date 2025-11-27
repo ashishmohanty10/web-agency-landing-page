@@ -20,34 +20,30 @@ export function Pricing() {
             <p>Plans & Pricing</p>
           </FeatureHighlight>
 
-          <div>
-            <p className="text-8xl font-semibold text-black leading-tight text-center">
-              Transparent Pricing,
-              <br />
-              <span className="text-secondary-title">
-                No Surprises Guaranteed{" "}
-              </span>
-            </p>
-          </div>
+          <p className="text-3xl md:text-5xl font-semibold text-black leading-tight text-center">
+            Transparent Pricing,
+            <br />
+            <span className="text-secondary-title">
+              No Surprises Guaranteed{" "}
+            </span>
+          </p>
 
-          <div className="flex justify-center">
-            <p className="text-lg text-text text-center w-[70%]">
-              We offer comprehensive web design and development services,
-              including custom solutions, e-commerce platforms, responsive
-              designs, and maintenance, as well as digital marketing, SEO, and
-              IT consulting services.
-            </p>
-          </div>
+          <p className="text-lg text-text text-center max-w-4xl md:max-w-7xl text-balance">
+            We offer comprehensive web design and development services,
+            including custom solutions, e-commerce platforms, responsive
+            designs, and maintenance, as well as digital marketing, SEO, and IT
+            consulting services.
+          </p>
         </div>
 
-        <div className="grid grid-cols-3 py-6 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-3 py-6 gap-8">
           {pricing.map((item, idx) => (
             <div
               key={idx}
               className="w-full border border-black/10 rounded-2xl p-4 h-full"
             >
               <div className="p-5 rounded-3xl bg-brand/10 w-fit mb-5">
-                <item.icon className="w-7 h-7 text-brand" />
+                <item.icon className=" size-5 text-brand" />
               </div>
 
               <div className="flex flex-col justify-evenly items-stretch ">
@@ -81,7 +77,7 @@ export function Pricing() {
                         idx === 2 && "text-7xl font-semibold text-text"
                       )}
                     >
-                      <data.icon className="w-7 h-7 text-text" />
+                      <data.icon className=" size-4 text-text" />
                       <p className="text-lg text-text">{data.label}</p>
                     </div>
                   ))}
@@ -91,7 +87,7 @@ export function Pricing() {
                   {item.addOn ? (
                     <div className="flex items-center justify-between gap-2 bg-brand/10 rounded-3xl px-2 py-1">
                       <div className="flex items-center  gap-2">
-                        <FramerDesign className="text-brand w-5 h-5" />
+                        <FramerDesign className="text-brand size-4" />
                         <p className="text-sm text-brand font-medium">
                           {item.addOn.title} {item.addOn.price}
                         </p>
@@ -121,7 +117,7 @@ export function Pricing() {
           ))}
         </div>
 
-        <div className="flex w-full gap-10 ">
+        <div className="flex w-full gap-5">
           <div className="w-1/2 p-4 border border-black/10 rounded-3xl">
             <div className="flex items-center gap-2 mb-5">
               <div className="border border-black/10 rounded-full overflow-hidden w-fit">
@@ -135,7 +131,7 @@ export function Pricing() {
               <p className="text-3xl text-black font-semibold">Ashley Hall</p>
             </div>
 
-            <p className="text-xl font-medium">
+            <p className="font-medium text-md">
               &quot;Ripple Template is a game-changer - fast, flexible,
               flawless, and utterly transformed my workflow.&quot;
             </p>
@@ -144,7 +140,7 @@ export function Pricing() {
           <div className="w-1/2 p-4 bg-black rounded-3xl flex flex-col justify-between">
             <p className="text-3xl font-semibold text-white leading-normal">
               Still Can&apos;t Decide? <br />
-              <span className="text-secondary-title">
+              <span className="text-secondary-title mt-4 text-md">
                 Let Us Help you Make the Right Decision.
               </span>
             </p>
