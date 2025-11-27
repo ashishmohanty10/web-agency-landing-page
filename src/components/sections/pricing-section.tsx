@@ -154,8 +154,8 @@ export function Pricing() {
               </div>
 
               <p className="font-medium text-md">
-                &quot;Ripple Template is a game-changer - fast, flexible,
-                flawless, and utterly transformed my workflow.&quot;
+                &quot;Our Template is a game-changer - fast, flexible, flawless,
+                and utterly transformed my workflow.&quot;
               </p>
             </div>
 

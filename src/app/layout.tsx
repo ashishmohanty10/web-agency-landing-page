@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     title: "Web Agency Landing Page",
     description:
       "Professional web agency specializing in custom websites, responsive design, SEO optimization, and digital solutions for businesses of all sizes.",
-    url: "https://www.ashishdev.in/",
+    url: "https://webagencydemo.ashishdev.in/",
     siteName: "Web Agency Landing Page",
     images: [
       {
-        url: "https://www.ashishdev.in/og.webp",
+        url: "https://webagencydemo.ashishdev.in/og.png",
         width: 1200,
         height: 630,
         alt: "Web Agency Landing Page",
@@ -31,11 +31,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Web Agency Landing Page",
-    description: "This is my Portfolio",
-    images: ["https://www.ashishdev.in/og.webp"],
+    description:
+      "Professional web agency specializing in custom websites, responsive design, SEO optimization, and digital solutions for businesses of all sizes.",
+    images: ["https://webagencydemo.ashishdev.in/og.png"],
   },
   icons: {
-    icon: "/icon.ico",
+    icon: "https://webagencydemo.ashishdev.in/icon.ico",
   },
 };
 
