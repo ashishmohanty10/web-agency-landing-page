@@ -14,7 +14,7 @@ export const HeroTitle = ({ children, className }: HeroElementsProps) => {
   return (
     <h1
       className={cn(
-        "text-9xl leading-snug tracking-tight font-semibold",
+        "text-5xl md:text-6xl xl:text-9xl leading-snug  tracking-tighter text-balance font-semibold lg:text-left text-center",
         className
       )}
     >
@@ -24,7 +24,13 @@ export const HeroTitle = ({ children, className }: HeroElementsProps) => {
 };
 
 export const HeroSubTitle = ({ children, className }: HeroElementsProps) => {
-  return <p className={cn("text-lg font-medium", className)}>{children}</p>;
+  return (
+    <p
+      className={cn("text-lg font-medium text-center lg:text-left", className)}
+    >
+      {children}
+    </p>
+  );
 };
 
 export const Hero = ({ children, className }: HeroProps) => {

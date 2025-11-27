@@ -1,21 +1,50 @@
 "use client";
 
+import { projects } from "@/lib/constant";
+import Image from "next/image";
+
 export function ProjectsScroll() {
   return (
-    <>
-      <div className="flex items-center gap-5 py-5 overflow-hidden">
-        <div className="flex animate-infinite-scroll [--animation-delay:60s] gap-10">
-          {Array.from({ length: 10 }).map((_, index) => (
-            <div
-              key={index}
-              className="flex items-center "
-              style={{ animationDelay: `${(index + 1) * 4}s` }} //
-            >
-              <div className="min-w-[50rem] rounded-3xl bg-gradient-to-tr from-black to-black/30 h-[60rem]"></div>
+    <div className="flex items-center gap-5 py-5 overflow-hidden rounded-md">
+      <div className="flex animate-infinite-scroll [--animation-delay:60s] gap-10 rounded-md">
+        {projects.map((data, index) => (
+          <div
+            key={index}
+            className="flex items-center"
+            style={{ animationDelay: `${(index + 1) * 4}s` }}
+          >
+            <div className="min-w-[50rem] rounded-3xl bg-gradient-to-tr from-black to-black/30 h-[60rem]">
+              <Image
+                src={data.img}
+                alt={data.name}
+                width={1000}
+                height={1000}
+                priority
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+
+        {projects.map((data, index) => (
+          <div
+            key={index}
+            className="flex items-center"
+            style={{ animationDelay: `${(index + 1) * 4}s` }}
+          >
+            <div className="min-w-[50rem] overflow-hidden bg-gradient-to-tr from-black to-black/30 h-[60rem]">
+              <Image
+                src={data.img}
+                alt={data.name}
+                width={1000}
+                height={1000}
+                priority
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }

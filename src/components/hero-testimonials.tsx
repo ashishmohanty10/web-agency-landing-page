@@ -1,33 +1,26 @@
 "use client";
 
 import { testimonials } from "@/lib/constant";
-import { cn } from "@/lib/utils";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "motion/react";
 
-export function HeroTestimonials() {
-  return (
-    <div className="w-[30%]">
-      <Testimonials testimonials={testimonials} />
-    </div>
-  );
-}
-
-interface TestimonialsProps {
+interface TestimonialsTypes {
   quote: string;
   name: string;
   designation: string;
   src: string;
 }
 
-function Testimonials({
-  testimonials,
-}: {
-  testimonials: TestimonialsProps[];
-  autoplay?: boolean;
-}) {
+export default function HeroTestimonials() {
+  return (
+    <div className="w-full max-w-md mx-auto p-8 hidden lg:block">
+      <Testimonials testimonials={testimonials} />
+    </div>
+  );
+}
+
+function Testimonials({ testimonials }: { testimonials: TestimonialsTypes[] }) {
   const [active, setActive] = useState(0);
 
   const handleNext = () => {
@@ -38,71 +31,109 @@ function Testimonials({
     setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, scale: 0.9, rotatex: 45 },
-    visible: { opacity: 1, scale: 1, rotatex: 45 },
-    exit: { opacity: 0, scale: 0.9, rotatex: 45 },
-  };
-
   return (
-    <div>
-      <div className="flex items-center gap-5 mb-5 -rotate-3">
-        <ArrowLeft
+    <div className="perspective-1000">
+      <div className="flex items-center gap-4 mb-6 transform -rotate-2">
+        <button
           onClick={handlePrev}
-          className={cn(
-            "cursor-pointer",
-            active === 0 ? "text-text" : "text-black"
-          )}
-        />
-        <ArrowRight
+          className={`p-2 rounded-full transition-all duration-200 hover:bg-gray-100 ${
+            active === 0
+              ? "text-gray-400 opacity-30 cursor-not-allowed"
+              : "text-black hover:scale-110"
+          }`}
+          disabled={active === 0}
+          aria-label="Previous testimonial"
+        >
+          <ArrowLeft className="w-5 h-5" />
+        </button>
+        <button
           onClick={handleNext}
-          className={cn(
-            "cursor-pointer",
-            active === testimonials.length - 1 ? "text-text" : "text-black"
-          )}
-        />
+          className={`p-2 rounded-full transition-all duration-200 hover:bg-gray-100 ${
+            active === testimonials.length - 1
+              ? "text-gray-400 opacity-30 cursor-not-allowed"
+              : "text-black hover:scale-110"
+          }`}
+          disabled={active === testimonials.length - 1}
+          aria-label="Next testimonial"
+        >
+          <ArrowRight className="w-5 h-5" />
+        </button>
+
+        <div className="flex items-center gap-2 ml-2">
+          {testimonials.map((_, index) => (
+            <div
+              key={index}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                index === active ? "w-6 bg-black" : "w-1.5 bg-gray-300"
+              }`}
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="relative h-40 -rotate-3">
-        <AnimatePresence mode="popLayout">
-          {testimonials.map(
-            (testimonial, index) =>
-              index === active && (
-                <motion.div
-                  key={index}
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  transition={{ duration: 0.5 }}
-                  className="absolute border border-black/10 inset-0 origin-bottom bg-white h-fit p-5 rounded-2xl max-w-lg"
-                >
-                  <div className="mb-5">
-                    <p className="text-md font-medium">{testimonial.quote}</p>
+      {/* Stacked Cards */}
+      <div
+        className="relative transform -rotate-2 min-h-[280px]"
+        style={{ perspective: "1000px" }}
+      >
+        {testimonials.map((testimonial, index) => {
+          const isActive = index === active;
+          const offset = index - active;
+
+          if (offset < 0) return null;
+
+          return (
+            <motion.div
+              key={index}
+              className="absolute top-0 left-0 right-0 origin-bottom cursor-pointer"
+              initial={false}
+              animate={{
+                y: offset * 5,
+                scale: 1 - offset * 0.05,
+                opacity: 1 - offset * 0.2,
+                zIndex: testimonials.length - offset,
+                rotateX: offset * 3,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+              onClick={() => !isActive && setActive(index)}
+            >
+              <div
+                className={`bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 rounded-2xl flex flex-col gap-6 ${
+                  isActive ? "border-gray-300" : "border-gray-200"
+                }`}
+              >
+                <div>
+                  <p className="text-base leading-relaxed text-gray-700 font-medium">
+                    "{testimonial.quote}"
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="rounded-full overflow-hidden w-12 h-12 flex-shrink-0">
+                    <img
+                      src={testimonial.src}
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
 
-                  <div className="flex items-center gap-5">
-                    <div className="rounded-full overflow-hidden w-10 h-10 object-center">
-                      <Image
-                        src={testimonial.src}
-                        alt="image"
-                        width={40}
-                        height={40}
-                        className="rounded-full"
-                      />
-                    </div>
-
-                    <div>
-                      <p className="text-sm font-medium">{testimonial.name}</p>
-                      <p className="text-xs font-medium">
-                        {testimonial.designation}
-                      </p>
-                    </div>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-xs text-gray-600 font-medium">
+                      {testimonial.designation}
+                    </p>
                   </div>
-                </motion.div>
-              )
-          )}
-        </AnimatePresence>
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   );

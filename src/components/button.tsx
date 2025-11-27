@@ -22,14 +22,15 @@ type ButtonProps = ButtonBaseProps &
 const buttonClasses = cva("relative inline-flex items-center", {
   variants: {
     variant: {
-      primary: "bg-brand rounded-full hover:bg-brand/80 text-white",
+      primary:
+        "bg-brand rounded-full hover:bg-brand/80 text-white shadow-lg hover:shadow-xl transition-shadow",
       secondary:
-        "bg-white border border-black/5 rounded-full text-black hover:shadow-lg duration-100 transition-opacity",
+        "bg-white border border-black/5 rounded-full text-black shadow-lg hover:shadow-xl transition-shadow duration-100 transition-opacity",
     },
     size: {
-      small: "text-sm py-1 px-4 font-medium shadow-sm",
-      medium: "text-lg py-2 px-4 font-semibold shadow-md",
-      large: "text-lg py-3 px-4 font-semibold shadow-md",
+      small: "text-sm py-2 px-3 font-medium shadow-sm",
+      medium: "text-sm py-2 px-3 font-semibold shadow-md",
+      large: "text-sm py-2 px-3 font-semibold shadow-md",
     },
   },
   defaultVariants: {
@@ -69,8 +70,8 @@ export const Button = ({ children, variant, size, ...props }: ButtonProps) => {
   return (
     <button {...props} className={classes}>
       {children}
-      <div className="ml-4 bg-text/5 border border-black/10 rounded-full p-1">
-        <ArrowRight size={16} />
+      <div className="ml-2 md:ml-4 bg-text/5 border border-black/10 rounded-full p-1">
+        <ArrowRight className="size-3 md:size-3" />
       </div>
     </button>
   );

@@ -18,9 +18,17 @@ export function Navbar() {
   });
 
   return (
-    <header className="mt-5 fixed top-0 z-50 w-full px-4">
+    <motion.header
+      className="mt-5 fixed top-0 z-50 w-full px-4"
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        duration: 0.3,
+        ease: "easeIn",
+      }}
+    >
       {/* Desktop */}
-      <motion.div className="w-fit mx-auto md:flex items-center justify-between border border-black/5 shadow-sm p-2 rounded-full backdrop-blur-sm bg-white/40 transition-all hidden">
+      <motion.div className="w-fit mx-auto md:flex items-center justify-between border border-black/5 shadow-sm p-2 rounded-full backdrop-blur-sm bg-white/85 transition-all hidden">
         <Link
           href="#"
           className="rounded-full border border-black/5 overflow-hidden w-fit shadow-2xl"
@@ -39,7 +47,7 @@ export function Navbar() {
             <ul key={item.label}>
               <Link
                 href="#"
-                className="flex items-center gap-x-1 hover:scale-105 duration-75 text-text hover:text-black transition-colors font-semibold text-md"
+                className="flex items-center gap-x-1 hover:scale-105 duration-75 text-black hover:text-black transition-colors font-semibold text-md"
               >
                 <item.icon className="w-5 h-5" />
                 <span>{item.label}</span>
@@ -120,6 +128,6 @@ export function Navbar() {
           </nav>
         </motion.div>
       </div>
-    </header>
+    </motion.header>
   );
 }

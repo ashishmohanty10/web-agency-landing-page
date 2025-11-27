@@ -63,11 +63,18 @@ export default {
         "0%": { transform: "translateX(0)" },
         "100%": { transform: "translateX(-50%)" },
       },
+
+      pulse: {
+        "0%, 100%": { opacity: "1", transform: "scale(1)" },
+        "50%": { opacity: ".6", transform: "scale(0.97)" },
+      },
     },
 
     animation: {
       "infinite-scroll":
         "infinite-scroll var(--animation-delay) linear infinite forwards",
+
+      pulse: "pulse 1.5s ease-in-out infinite",
     },
   },
   plugins: [],

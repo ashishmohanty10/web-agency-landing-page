@@ -2,17 +2,17 @@ import { Button, Highlight } from "../button";
 import { Container } from "../container-wrapper";
 import { HeroSubTitle, HeroTitle } from "../hero";
 import { icons } from "@/lib/constant";
-import { HeroTestimonials } from "../hero-testimonials";
 import { ProjectsScroll } from "../projects-scroll";
+import HeroTestimonials from "../hero-testimonials";
 
 export function HeroSection() {
   return (
     <div className="w-full h-[calc(100vh-(var(--navbar-height))] pt-[15rem] pb-10">
-      <Container className="flex w-full justify-between items-center gap-10">
-        <div className="w-[70%] h-full">
-          <div className="flex flex-col space-y-5 mb-10">
+      <Container className="xl:flex w-full justify-between items-center gap-10">
+        <div className="xl:w-[70%] h-full">
+          <div className="flex flex-col space-y-5 mb-10 items-center justify-center">
             <Highlight className="flex items-center gap-x-2">
-              <div className="w-2 h-2 bg-green rounded-full"></div>
+              <div className="w-2 h-2 bg-green rounded-full animate-pulse"></div>
               <p className="text-sm font-medium text-text">
                 Only 2 Spots Left - Starts at $3k/month
               </p>
@@ -29,7 +29,7 @@ export function HeroSection() {
             </HeroSubTitle>
           </div>
 
-          <div className="flex items-center gap-x-3 mb-8">
+          <div className="md:flex items-center justify-center gap-x-3 mb-8 hidden">
             <Button size="large" className="flex items-center">
               See Plans $ Pricing
             </Button>
@@ -42,9 +42,24 @@ export function HeroSection() {
             </Button>
           </div>
 
-          <div className="max-w-3xl">
-            <p className="text-text text-xs">Trusted by Leading Brands:</p>
-            <div className="flex items-center mask-gradient">
+          <div className="flex items-center justify-center gap-x-3 mb-8 md:hidden">
+            <Button size="small" className="flex items-center text-xs">
+              See Plans $ Pricing
+            </Button>
+            <Button
+              size="small"
+              variant="secondary"
+              className="flex items-center text-xs tracking-tighter"
+            >
+              Schedule a call
+            </Button>
+          </div>
+
+          <div>
+            <p className="text-text text-center text-xs">
+              Trusted by Leading Brands:
+            </p>
+            <div className="flex items-center mask-gradient overflow-hidden">
               <div className="flex items-center gap-x-4 animate-infinite-scroll [--animation-delay:10s]">
                 {icons.map((item) => (
                   <div key={item.id}>
