@@ -117,8 +117,8 @@ export function Pricing() {
           ))}
         </div>
 
-        <div className="flex w-full gap-5">
-          <div className="w-1/2 p-4 border border-black/10 rounded-3xl">
+        <div className="md:flex w-full gap-5">
+          <div className="md:w-1/2 mb-4 md:mb-0 p-4 border border-black/10 rounded-3xl">
             <div className="flex items-center gap-2 mb-5">
               <div className="border border-black/10 rounded-full overflow-hidden w-fit">
                 <Image
@@ -137,7 +137,7 @@ export function Pricing() {
             </p>
           </div>
 
-          <div className="w-1/2 p-4 bg-black rounded-3xl flex flex-col justify-between">
+          <div className="md:w-1/2 p-4 bg-black rounded-3xl flex flex-col justify-between">
             <p className="text-3xl font-semibold text-white leading-normal">
               Still Can&apos;t Decide? <br />
               <span className="text-secondary-title mt-4 text-md">
@@ -145,8 +145,8 @@ export function Pricing() {
               </span>
             </p>
 
-            <div className="space-x-4 ">
-              <Button size="small">Send Us an Email</Button>
+            <div className="space-x-4 flex mt-3 md:mt-0">
+              <Button size="small">Send an email</Button>
               <Button size="small" variant="secondary">
                 Schedule a call
               </Button>
