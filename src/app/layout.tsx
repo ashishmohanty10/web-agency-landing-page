@@ -11,6 +11,32 @@ export const metadata: Metadata = {
   title: "Web Agency Landing Page",
   description:
     "Professional web agency specializing in custom websites, responsive design, SEO optimization, and digital solutions for businesses of all sizes.",
+  openGraph: {
+    title: "Web Agency Landing Page",
+    description:
+      "Professional web agency specializing in custom websites, responsive design, SEO optimization, and digital solutions for businesses of all sizes.",
+    url: "https://www.ashishdev.in/",
+    siteName: "Web Agency Landing Page",
+    images: [
+      {
+        url: "https://www.ashishdev.in/og.webp",
+        width: 1200,
+        height: 630,
+        alt: "Web Agency Landing Page",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Agency Landing Page",
+    description: "This is my Portfolio",
+    images: ["https://www.ashishdev.in/og.webp"],
+  },
+  icons: {
+    icon: "/icon.ico",
+  },
 };
 
 export default function RootLayout({
