@@ -10,7 +10,7 @@ export function Badge({
   return (
     <div
       className={cn(
-        "text-xs bg-brand rounded-full px-2 py-1 text-white font-semibold",
+        "text-xs bg-brand rounded-full px-3 py-2 text-white font-semibold min-w-fit",
         className
       )}
     >
