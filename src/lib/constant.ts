@@ -1,5 +1,4 @@
 import { AddMoreIcon } from "@/components/icons/addmore-icon";
-import { BenefitsIcon } from "@/components/icons/benefits-icon";
 import { Betashares } from "@/components/icons/betashares-icon";
 import { BrandingIcon } from "@/components/icons/branding-icon";
 import { ChatBaseIcon } from "@/components/icons/chatbase-icon";
@@ -7,7 +6,6 @@ import { CopyWriting } from "@/components/icons/copywriting-icon";
 import { CustomIcon } from "@/components/icons/custom-icon";
 import { FigmaDesign } from "@/components/icons/figma-design";
 import { FramerDesign } from "@/components/icons/framer-design-icon";
-import { FramerMigration } from "@/components/icons/framer-migration-icon";
 import { GithubIcon } from "@/components/icons/github-icon";
 import { HumataIcon } from "@/components/icons/humata-icon";
 import { Icon } from "@/components/icons/icons";
@@ -17,48 +15,50 @@ import { KreaIcon } from "@/components/icons/krea-icon";
 import { LandingPageIcon } from "@/components/icons/landing-page";
 import { LoopIcon } from "@/components/icons/loop-icon";
 import { OneActiveIcon } from "@/components/icons/one-active-icon";
-import { OPtimizationIcon } from "@/components/icons/optimization-icon";
 
 import { OurWorkIcon } from "@/components/icons/our-work-icon";
 import { PauseIcon } from "@/components/icons/pause-icon";
 import { ProcessIcon } from "@/components/icons/process-icon";
-import { SEOIcon } from "@/components/icons/seo-icon";
 import { ServiceIcon } from "@/components/icons/service-icon";
 import { SlackIcon } from "@/components/icons/slack-icon";
 import { SlideDecksIcon } from "@/components/icons/slidedecks-icon";
 import { SocialMediaIcon } from "@/components/icons/socialmedia-icon";
 import { StartupIcon } from "@/components/icons/startup-icon";
-import { TestimonialIcon } from "@/components/icons/testimonial-icon";
 import { TimeIcon } from "@/components/icons/time-icon";
 import { UnlimitedRevision } from "@/components/icons/unlimited-revision";
-import { VideoMotion } from "@/components/icons/videomotion-icon";
 import { WeDeliverIcon } from "@/components/icons/we-deliver-icon";
 import { WebsiteDesign } from "@/components/icons/website-design";
+import { CircleHelp, Coins } from "lucide-react";
+import { Variants } from "motion";
 
 export const navLinks = [
   {
     label: "Services",
     icon: ServiceIcon,
+    href: "#services",
   },
 
   {
     label: "Process",
     icon: ProcessIcon,
-  },
-
-  {
-    label: "Benefits",
-    icon: BenefitsIcon,
+    href: "#process",
   },
 
   {
     label: "Our Work",
     icon: OurWorkIcon,
+    href: "#our-work",
+  },
+  {
+    label: "Pricing",
+    icon: Coins,
+    href: "#pricing",
   },
 
   {
-    label: "Testimonials",
-    icon: TestimonialIcon,
+    label: "FAQ",
+    icon: CircleHelp,
+    href: "#faq",
   },
 ];
 
@@ -253,3 +253,38 @@ export const testimonials = [
     src: "/profile3.avif",
   },
 ];
+
+export const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+export const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+};
+
+export const cardItemVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.4,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+};

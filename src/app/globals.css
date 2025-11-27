@@ -3,6 +3,14 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: var(--navbar-height, 80px);
+}
+
 @layer base {
   html {
     :root {

@@ -10,7 +10,7 @@ import { WorkSection } from "@/components/sections/work-section";
 
 export default function Home() {
   return (
-    <div className="h-[3000px] space-y-10">
+    <div className="space-y-10">
       <Navbar />
       <HeroSection />
       <ServiceSection />

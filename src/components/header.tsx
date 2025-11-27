@@ -30,7 +30,7 @@ export function Navbar() {
       {/* Desktop */}
       <motion.div className="w-fit mx-auto md:flex items-center justify-between border border-black/5 shadow-sm p-2 rounded-full backdrop-blur-sm bg-white/85 transition-all hidden">
         <Link
-          href="#"
+          href="#hero"
           className="rounded-full border border-black/5 overflow-hidden w-fit shadow-2xl"
         >
           <Image
@@ -44,15 +44,14 @@ export function Navbar() {
 
         <div className="flex items-center gap-x-6 ml-5">
           {navLinks.map((item) => (
-            <ul key={item.label}>
-              <Link
-                href="#"
-                className="flex items-center gap-x-1 hover:scale-105 duration-75 text-black hover:text-black transition-colors font-semibold text-md"
-              >
-                <item.icon className="w-5 h-5" />
-                <span>{item.label}</span>
-              </Link>
-            </ul>
+            <Link
+              href={item.href}
+              key={item.href}
+              className="flex items-center gap-x-1 hover:scale-105 duration-75 text-black hover:text-black transition-colors font-semibold text-sm"
+            >
+              <item.icon className="size-4" />
+              <span>{item.label}</span>
+            </Link>
           ))}
         </div>
 
@@ -72,7 +71,7 @@ export function Navbar() {
       <div className="md:hidden">
         <div className="flex items-center justify-between border border-black/5 shadow-sm p-3 rounded-full backdrop-blur-sm bg-white/40">
           <Link
-            href="#"
+            href="#hero"
             className="rounded-full border border-black/5 overflow-hidden w-fit shadow-2xl"
           >
             <Image
@@ -111,8 +110,8 @@ export function Navbar() {
           <nav className="flex flex-col p-4">
             {navLinks.map((item) => (
               <Link
-                key={item.label}
-                href="#"
+                key={item.href}
+                href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center gap-x-3 p-3 hover:bg-black/5 rounded-xl transition-colors text-text hover:text-black font-semibold"
               >

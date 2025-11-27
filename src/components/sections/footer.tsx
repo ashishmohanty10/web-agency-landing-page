@@ -2,13 +2,24 @@
 
 import { Facebook, Linkedin, SendHorizontal, Twitter } from "lucide-react";
 import { Container } from "../container-wrapper";
+import { motion } from "motion/react";
+import { containerVariants, itemVariants } from "@/lib/constant";
 
 export function Footer() {
   return (
     <div className="bg-black w-full rounded-t-[5rem] h-[60rem]">
       <Container className="flex flex-col justify-between h-full py-20">
-        <div className="w-full lg:flex items-start gap-x-10">
-          <div className="lg:w-1/2 mb-10 lg:mb-0">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="w-full lg:flex items-start gap-x-10"
+        >
+          <motion.div
+            variants={itemVariants}
+            className="lg:w-1/2 mb-10 lg:mb-0"
+          >
             <div>
               <p className="text-3xl md:text-5xl font-serif text-white mb-4">
                 Try Not To Become A Man Of Success. <br /> Rather A Man Of
@@ -22,9 +33,9 @@ export function Footer() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="lg:w-1/2">
+          <motion.div variants={itemVariants} className="lg:w-1/2">
             <p className="text-md md:text-xl text-secondary-title font-semibold ">
               Subscribe to Our Newsletter
             </p>
@@ -41,8 +52,8 @@ export function Footer() {
                 <p className="text-md md:text-xl font-semibold">Sign Up</p>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <div className="flex items-center justify-between">
           <p className="text-white/60 text-xs font-medium">Copyright © 2025 </p>
