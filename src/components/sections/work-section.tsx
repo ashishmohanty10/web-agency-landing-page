@@ -26,7 +26,7 @@ export function WorkSection() {
         </FeatureHighlight>
 
         <div className="mb-14">
-          <p className="text-5xl font-semibold text-black leading-snug mb-5">
+          <p className="text-3xl md:text-5xl text-balance font-semibold text-black leading-snug mb-5">
             A Collection of Projects We&apos;ve Worked On.
             <br />
             <span className="text-secondary-title">
@@ -41,7 +41,7 @@ export function WorkSection() {
         </div>
 
         <div className="space-y-5">
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {visibleProjects.map((items) => (
               <div key={items.name}>
                 <div className="border-[1rem] border-white/10 rounded-3xl overflow-hidden group">

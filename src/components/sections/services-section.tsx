@@ -18,7 +18,7 @@ export function ServiceSection() {
 
       <div className="w-full md:flex items-center justify-between mb-8">
         <div className="md:w-1/2 text-balance">
-          <p className="text-5xl font-semibold text-black leading-snug">
+          <p className="text-3xl md:text-5xl font-semibold text-black leading-snug">
             Visionary Design, Impactful Branding: <br />
             <span className="text-secondary-title">
               Elevating Your Digital Landscape.

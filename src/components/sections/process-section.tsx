@@ -17,7 +17,7 @@ export function ProcessSection() {
 
       <div className="w-full md:flex items-center justify-between mb-8">
         <div className="md:w-1/2">
-          <p className="text-5xl font-semibold text-black leading-snug">
+          <p className="text-3xl md:text-5xl font-semibold text-black leading-snug">
             A Proven & Easy Process to Success: <br />
             <span className="text-secondary-title">
               Simplify, Grow, Thrive.

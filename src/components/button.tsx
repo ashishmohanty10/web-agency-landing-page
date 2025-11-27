@@ -28,9 +28,12 @@ const buttonClasses = cva("relative inline-flex items-center", {
         "bg-white border border-black/5 rounded-full text-black shadow-md hover:shadow-xl transition-shadow duration-100 transition-opacity",
     },
     size: {
-      small: "text-sm py-2 px-3 font-medium shadow-sm",
-      medium: "text-sm py-2 px-3 font-semibold shadow-md",
-      large: "text-sm py-2 px-3 font-semibold shadow-md",
+      small:
+        "text-xs tracking-tighter md:text-sm py-2 px-3 font-medium shadow-sm",
+      medium:
+        "text-xs tracking-tighter md:text-sm py-2 px-3 font-semibold shadow-md",
+      large:
+        "text-xs tracking-tighter md:text-sm py-2 px-3 font-semibold shadow-md",
     },
   },
   defaultVariants: {
