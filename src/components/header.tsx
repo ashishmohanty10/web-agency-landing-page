@@ -106,7 +106,7 @@ export function Navbar() {
           transition={{ duration: 0.2 }}
           className={`${
             isMobileMenuOpen ? "block" : "hidden"
-          } mt-3 border border-black/5 shadow-lg rounded-3xl backdrop-blur-sm bg-white/95 overflow-hidden`}
+          } mt-3 border border-black/5 shadow-md rounded-3xl backdrop-blur-sm bg-white/95 overflow-hidden`}
         >
           <nav className="flex flex-col p-4">
             {navLinks.map((item) => (

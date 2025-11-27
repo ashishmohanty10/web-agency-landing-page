@@ -37,7 +37,7 @@ export function ProcessSection() {
         </div>
 
         <div className="grid grid-cols-2 justify-between w-full gap-10">
-          <div className="w-full border border-black/5 rounded-2xl shadow-lg ">
+          <div className="w-full border border-black/5 rounded-2xl shadow-md ">
             <div className="flex items-start w-full">
               <div className="flex flex-col justify-between p-5 w-[90%]">
                 <div className="p-3 bg-brand/10 rounded-3xl w-fit mb-10">
@@ -60,7 +60,7 @@ export function ProcessSection() {
               </div>
             </div>
           </div>
-          <div className="w-full border border-black/5 rounded-2xl shadow-lg">
+          <div className="w-full border border-black/5 rounded-2xl shadow-md">
             <div className="flex items-start w-full">
               <div className="flex flex-col justify-between p-5 w-[90%]">
                 <div className="p-3 bg-brand/10 rounded-3xl w-fit mb-10">
@@ -84,7 +84,7 @@ export function ProcessSection() {
             </div>
           </div>
 
-          <div className="w-full border border-black/5 rounded-2xl shadow-lg">
+          <div className="w-full border border-black/5 rounded-2xl shadow-md">
             <div className="flex items-start w-full">
               <div className="flex flex-col justify-between p-5 w-[90%]">
                 <div className="p-3 bg-brand/10 rounded-3xl w-fit mb-10">
@@ -108,7 +108,7 @@ export function ProcessSection() {
             </div>
           </div>
 
-          <div className="w-full border border-black/5 rounded-2xl shadow-lg">
+          <div className="w-full border border-black/5 rounded-2xl shadow-md">
             <div className="flex items-start w-full">
               <div className="flex flex-col justify-between p-5 w-[90%]">
                 <div className="p-3 bg-brand/10 rounded-3xl w-fit mb-10">

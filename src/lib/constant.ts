@@ -96,22 +96,6 @@ export const service = [
     label: "Copywriting",
     icon: CopyWriting,
   },
-  {
-    label: "Optimization",
-    icon: OPtimizationIcon,
-  },
-  {
-    label: "SEO",
-    icon: SEOIcon,
-  },
-  {
-    label: "Video & Motion Graphics",
-    icon: VideoMotion,
-  },
-  {
-    label: "Framer Migration",
-    icon: FramerMigration,
-  },
 ];
 
 export const projects = [

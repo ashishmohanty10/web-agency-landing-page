@@ -23,9 +23,9 @@ const buttonClasses = cva("relative inline-flex items-center", {
   variants: {
     variant: {
       primary:
-        "bg-brand rounded-full hover:bg-brand/80 text-white shadow-lg hover:shadow-xl transition-shadow",
+        "bg-brand rounded-full hover:bg-brand/80 text-white shadow-md hover:shadow-xl transition-shadow",
       secondary:
-        "bg-white border border-black/5 rounded-full text-black shadow-lg hover:shadow-xl transition-shadow duration-100 transition-opacity",
+        "bg-white border border-black/5 rounded-full text-black shadow-md hover:shadow-xl transition-shadow duration-100 transition-opacity",
     },
     size: {
       small: "text-sm py-2 px-3 font-medium shadow-sm",

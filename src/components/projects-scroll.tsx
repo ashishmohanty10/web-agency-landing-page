@@ -10,10 +10,10 @@ export function ProjectsScroll() {
         {projects.map((data, index) => (
           <div
             key={index}
-            className="flex items-center"
+            className="flex items-center cursor-pointer"
             style={{ animationDelay: `${(index + 1) * 4}s` }}
           >
-            <div className="min-w-[50rem] rounded-3xl bg-gradient-to-tr from-black to-black/30 h-[60rem]">
+            <div className="min-w-[50rem] overflow-hidden bg-gradient-to-tr from-black to-black/30 h-[60rem] rounded-2xl">
               <Image
                 src={data.img}
                 alt={data.name}
@@ -29,17 +29,17 @@ export function ProjectsScroll() {
         {projects.map((data, index) => (
           <div
             key={index}
-            className="flex items-center"
+            className="flex items-center cursor-pointer"
             style={{ animationDelay: `${(index + 1) * 4}s` }}
           >
-            <div className="min-w-[50rem] overflow-hidden bg-gradient-to-tr from-black to-black/30 h-[60rem]">
+            <div className="min-w-[50rem] overflow-hidden bg-gradient-to-tr from-black to-black/30 h-[60rem] rounded-2xl">
               <Image
                 src={data.img}
                 alt={data.name}
                 width={1000}
                 height={1000}
                 priority
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl"
               />
             </div>
           </div>

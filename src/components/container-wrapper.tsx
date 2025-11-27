@@ -9,7 +9,7 @@ export function Container({
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn("max-w-[120rem] mx-auto px-10", className)}>
+    <div className={cn("max-w-[120rem] mx-auto px-10 py-14", className)}>
       {children}
     </div>
   );

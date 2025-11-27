@@ -102,7 +102,7 @@ function Testimonials({ testimonials }: { testimonials: TestimonialsTypes[] }) {
               onClick={() => !isActive && setActive(index)}
             >
               <div
-                className={`bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 rounded-2xl flex flex-col gap-6 ${
+                className={`bg-white shadow-md hover:shadow-xl transition-shadow duration-300 p-6 rounded-2xl flex flex-col gap-6 ${
                   isActive ? "border-gray-300" : "border-gray-200"
                 }`}
               >
